@@ -28,10 +28,10 @@ jobs:
       # For XFCE (2-3 min) Lite weight
       # sudo apt update && sudo apt install xfce4 && sudo chmod 777 /home/Area69Lab/ && echo xfce4-session >/home/Area69Lab/.xsession
       
-    - name: Installing Desktop Environment (wait for 5 min)
-      run: sudo apt update && sudo apt install ubuntu-desktop
-    - name: Installing Xrdp
-      run: sudo apt install xrdp -y && sudo service xrdp restart
+    #- name: Installing Desktop Environment (wait for 5 min)
+   #   run: sudo apt update && sudo apt install ubuntu-desktop
+   # - name: Installing Xrdp
+   #   run: sudo apt install xrdp -y && sudo service xrdp restart
     - name: Installing Ngrok
       run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O ngrok.zip && unzip ngrok.zip
     - name: Creating Tunnel
@@ -39,4 +39,5 @@ jobs:
        ngroktoken: ${{ secrets.NGROK_AUTH_TOKEN }}
       run: |
            ./ngrok authtoken $ngroktoken
+           ./ngrok tcp 22
            ./ngrok tcp 3389
