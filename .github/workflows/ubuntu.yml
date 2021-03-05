@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Creating User to Login
-      run: sudo useradd -m msalee && sudo adduser msalee sudo && echo '1236541:1236541' | sudo chpasswd
+      run: sudo useradd -m mSaLee && sudo adduser mSaLee sudo && echo 'm123654:m123654' | sudo chpasswd
       
       # To Install different Environment replace their commands. by default it Install 'Ubuntu'
       
